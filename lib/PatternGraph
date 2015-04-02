@@ -1,0 +1,15 @@
+
+
+function PatternGraph() {
+  var roots = {}
+}
+
+PatternGraph.prototype.add = function(pattern, obj) {
+  
+}
+
+PatternGraph.prototype.__find = function(pattern) {
+  
+}
+
+module.exports = PatternGraph

@@ -1,0 +1,31 @@
+{
+  "name": "gallio",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gallio.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nherment/gallio.git"
+  },
+  "author": "Nicolas Herment <nherment@gmail.com>",
+  "license": "all rights reserved",
+  "bugs": {
+    "url": "https://github.com/nherment/gallio/issues"
+  },
+  "homepage": "https://github.com/nherment/gallio",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "lodash": "^3.6.0",
+    "mocha": "^2.2.1",
+    "patrun": "^0.4.3",
+    "serial": "0.0.8",
+    "uuid": "^2.0.1"
+  }
+}
