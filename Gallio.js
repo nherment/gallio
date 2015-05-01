@@ -120,32 +120,11 @@ Gallio.prototype.delegate = function(fixedArgs) {
   return delegate
 }
 
-Gallio.prototype.add = function(pattern, func_or_secondary_pattern, func) {
-  //console.log(__file, __line, __function)
-  var normalizedPattern = {}
-  
-  if(_.isString(pattern)) {
-    _.each(pattern.split(','), function(keyValuePair) {
-      var keyValue = keyValuePair.split(':')
-      normalizedPattern[keyValue[0]] = keyValue[1]
-    })
-  } else {
-    normalizedPattern = pattern
-  }
-  
-  if(func) {
-    _.merge(normalizedPattern, func_or_secondary_pattern)
-  } else {
-    func = func_or_secondary_pattern
-  }
-
-  // TODO: Remove all this junk above.
-  //       There should be only one line here and it's the one below
+Gallio.prototype.add = function(pattern, func) {
   this._router.register(normalizedPattern, {
     origin: __caller_info,
     func: func
   })
-  console.log('-', JSON.stringify(__caller_info), JSON.stringify(normalizedPattern))
 }
 
 Gallio.prototype.act = function(args, callback) {
