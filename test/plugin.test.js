@@ -13,7 +13,7 @@ describe('plugin - basic use', function() {
     var id
     
     gallio.use(function(options) {
-      this.add(, function(args, callback) {
+      this.add({role: 'foo', cmd: 'bar'}, function(args, callback) {
         id = uuid.v4()
         callback(null, id)
       })

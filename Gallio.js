@@ -121,7 +121,7 @@ Gallio.prototype.delegate = function(fixedArgs) {
 }
 
 Gallio.prototype.add = function(pattern, func) {
-  this._router.register(normalizedPattern, {
+  this._router.register(pattern, {
     origin: __caller_info,
     func: func
   })
